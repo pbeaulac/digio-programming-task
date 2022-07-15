@@ -11,12 +11,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.digio.models.NetworkRequest;
 import com.digio.services.implementations.NetworkRequestFactoryServiceImpl;
+import com.digio.services.interfaces.NetworkRequestFactoryService;
 
 @ExtendWith(MockitoExtension.class)
 @RunWith(JUnitPlatform.class)
 public class NetworkRequestFactoryServiceTest {
 	
-	private NetworkRequestFactoryServiceImpl networkRequestFactoryService;
+	private NetworkRequestFactoryService networkRequestFactoryService;
 	
 	@BeforeEach
 	public void setUp() {

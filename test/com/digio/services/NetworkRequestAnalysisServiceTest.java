@@ -15,12 +15,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.digio.models.NetworkRequest;
 import com.digio.services.implementations.NetworkRequestAnalysisServiceImpl;
+import com.digio.services.interfaces.NetworkRequestAnalysisService;
 
 @ExtendWith(MockitoExtension.class)
 @RunWith(JUnitPlatform.class)
 public class NetworkRequestAnalysisServiceTest {
 
-	private NetworkRequestAnalysisServiceImpl networkRequestAnalsysService;
+	private NetworkRequestAnalysisService networkRequestAnalsysService;
 	
 	@BeforeEach
 	public void setUp() {

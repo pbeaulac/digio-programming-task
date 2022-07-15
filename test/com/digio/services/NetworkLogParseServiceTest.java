@@ -20,6 +20,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.digio.models.NetworkRequest;
 import com.digio.services.implementations.NetworkLogParseServiceImpl;
 import com.digio.services.interfaces.LogService;
+import com.digio.services.interfaces.NetworkLogParseService;
 import com.digio.services.interfaces.NetworkRequestFactoryService;
 
 @ExtendWith(MockitoExtension.class)
@@ -29,7 +30,7 @@ public class NetworkLogParseServiceTest {
 	@Mock private LogService logService;
 	@Mock private NetworkRequestFactoryService networkRequestFactoryService;
 	
-	private NetworkLogParseServiceImpl networkLogParseService;
+	private NetworkLogParseService networkLogParseService;
 	
 	@BeforeEach
 	public void setUp() throws Exception {
