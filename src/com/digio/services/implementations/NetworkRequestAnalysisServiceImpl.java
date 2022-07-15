@@ -27,7 +27,7 @@ public class NetworkRequestAnalysisServiceImpl implements NetworkRequestAnalysis
 		Objects.requireNonNull(bound);
 		
 		List<Map.Entry<String,Long>> sortedTable = generateURLsFrequencyTable(requests).entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-				.limit(bound).toList();
+				.limit(bound).collect(Collectors.toList());
 		
 		return buildOutputList(sortedTable);
 	}
@@ -39,7 +39,7 @@ public class NetworkRequestAnalysisServiceImpl implements NetworkRequestAnalysis
 		Objects.requireNonNull(bound);
 		
 		List<Map.Entry<String,Long>> sortedTable = generateIPFrequencyTable(requests).entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-				.limit(bound).toList();
+				.limit(bound).collect(Collectors.toList());
 		
 		return buildOutputList(sortedTable);
 
